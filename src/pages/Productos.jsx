@@ -28,16 +28,17 @@ const products = [
 ];
 
 function Productos() {
-  return (
-    <div style={{ padding: '2rem' }}>
-      <h2>Catálogo de Productos</h2>
-      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-        {products.map(product => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+return (
+  <main>
+    <h2>Catálogo de Productos</h2>
+    <div className="product-grid">
+      {products.map(product => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </div>
-  );
+  </main>
+);
+
 }
 
 export default Productos;
